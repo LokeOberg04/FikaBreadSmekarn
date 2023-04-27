@@ -1,6 +1,6 @@
 # Slutprojekt
 
-Jag vill göra ett klicker/idle spel typ som Cookie Clicker jag ska sedan spara dina "progress" på en databas.
+Jag vill göra ett klicker/idle spel typ som Cookie Clicker, jag ska sedan spara din "progress" på en databas.
 Spelet ska ha:
 
 - En knapp som man trycker på för att få pengar
