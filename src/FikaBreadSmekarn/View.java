@@ -1,10 +1,11 @@
 package FikaBreadSmekarn;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 public class View {
 
-    private JPanel JPanel;
+    private JPanel Panel;
     private JTextPane textPane1;
     private JButton fikaBrödButton;
     private JButton button1;
@@ -14,11 +15,20 @@ public class View {
     private JButton button5;
     private JTextArea textArea1;
 
-    public JPanel getPanel() {
-        return JPanel;
+    public JButton getFikaBrödButton() {
+        return fikaBrödButton;
     }
 
-    public void setMessage(String c) {
-        textArea1.setText(c);
+    public View() {
+
+    }
+
+    public JPanel getPanel() {
+        return Panel;
+    }
+
+
+    public void setFika(String c) {
+        textPane1.setText(c);
     }
 }
