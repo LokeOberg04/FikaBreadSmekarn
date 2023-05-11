@@ -2,3 +2,6 @@ Figma: https://www.figma.com/file/YUUyWjWmweuIkxgf0LHLsI/Untitled?node-id=0-1&t=
 
 # 2023-04-28 Fredag
 Jag har gjort en figma skiss, lite på view och börjat göra byggnaderna
+
+# 2023-05-11 Torsdag
+Jag har gjort en clicker, man kan klicka och då får man fikabröd. Nästa lektion så ska jag försöka att fixa en save funktion så att det sparas på en databas.
