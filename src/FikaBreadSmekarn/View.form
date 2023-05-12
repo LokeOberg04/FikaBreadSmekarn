@@ -16,6 +16,8 @@
         </constraints>
         <properties>
           <editable value="false"/>
+          <text value="0 FikaBröd&#10;1 Clicking Power&#10;"/>
+          <toolTipText value="0 FikaBröd\n1 Clicking Power"/>
         </properties>
       </component>
       <component id="94472" class="javax.swing.JButton" binding="fikaBrödButton" default-binding="true">
@@ -31,10 +33,10 @@
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="AlexandroMaid"/>
         </properties>
       </component>
-      <component id="4dbbf" class="javax.swing.JButton" binding="button2" default-binding="true">
+      <component id="4dbbf" class="javax.swing.JButton" binding="button4">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -42,7 +44,7 @@
           <text value="Button"/>
         </properties>
       </component>
-      <component id="2246e" class="javax.swing.JButton" binding="button3" default-binding="true">
+      <component id="2246e" class="javax.swing.JButton" binding="button5">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -50,7 +52,7 @@
           <text value="Button"/>
         </properties>
       </component>
-      <component id="60b3c" class="javax.swing.JButton" binding="button4" default-binding="true">
+      <component id="60b3c" class="javax.swing.JButton" binding="button3">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -58,12 +60,12 @@
           <text value="Button"/>
         </properties>
       </component>
-      <component id="1309a" class="javax.swing.JButton" binding="button5" default-binding="true">
+      <component id="1309a" class="javax.swing.JButton" binding="button2">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="AlexandroBaker"/>
         </properties>
       </component>
       <component id="b3120" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">

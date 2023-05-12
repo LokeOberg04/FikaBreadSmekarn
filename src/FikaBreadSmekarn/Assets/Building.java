@@ -5,6 +5,12 @@ public class Building {
         int cost;
         int owned;
 
+    public Building(int fps, int cost, int owned) {
+        this.fps = fps;
+        this.cost = cost;
+        this.owned = owned;
+    }
+
     public int getCost() {
         return cost;
     }
@@ -21,9 +27,7 @@ public class Building {
         this.owned = owned;
     }
 
-    public Building(int fps, int cost) {
-        this.fps = fps;
-        this.cost = cost;
-        this.owned = 0;
+    public int getFps() {
+        return fps;
     }
 }

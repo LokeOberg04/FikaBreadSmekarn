@@ -1,7 +1,6 @@
 package FikaBreadSmekarn;
 
 import javax.swing.*;
-import java.awt.event.ActionListener;
 
 public class View {
 
@@ -17,6 +16,26 @@ public class View {
 
     public JButton getFikaBrödButton() {
         return fikaBrödButton;
+    }
+
+    public JButton getButton1() {
+        return button1;
+    }
+
+    public JButton getButton2() {
+        return button4;
+    }
+
+    public JButton getButton3() {
+        return button5;
+    }
+
+    public JButton getButton4() {
+        return button3;
+    }
+
+    public JButton getButton5() {
+        return button2;
     }
 
     public View() {
