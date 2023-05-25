@@ -42,6 +42,7 @@ public class Controller extends JFrame {
             m.BuyBuilding(m.getAlexandroMaid());
                 System.out.println("You have " + m.getAlexandroMaid().getOwned() + " AlexandroMaids\nThey now cost " + m.getAlexandroMaid().getCost() + " FikaBröd");
                 v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+                v.setMaid("<html>AlexandroMaid <br> You own " + m.getAlexandroMaid().getOwned() + "<br> They Cost " + m.getAlexandroMaid().getCost() + "</html>");
             }
         });
         v.getButton5().addActionListener(new ActionListener() {
@@ -50,6 +51,7 @@ public class Controller extends JFrame {
                 m.BuyBuilding(m.getAlexandroBaker());
                 System.out.println("You have " + m.getAlexandroBaker().getOwned() + " AlexandroBaker\nThey now cost " + m.getAlexandroBaker().getCost() + " FikaBröd");
                 v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+                v.setBaker("<html>AlexandroBaker <br> You own " + m.getAlexandroBaker().getOwned() + "<br> They Cost " + m.getAlexandroBaker().getCost() + "</html>");
             }
         });
         v.getButton4().addActionListener(new ActionListener() {
@@ -71,6 +73,24 @@ public class Controller extends JFrame {
             }
         });
 
+        v.getSave().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            m.save();
+            }
+        });
+
+        v.getImportButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                m.importsave();
+                m.setClickpower(1+(m.getAlexandroMaid().getOwned() * m.getAlexandroMaid().getFps() + m.getAlexandroBaker().getOwned() * m.getAlexandroBaker().getFps()));
+                v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+                v.setMaid("<html>AlexandroMaid <br> You own " + m.getAlexandroMaid().getOwned() + "<br> They Cost " + m.getAlexandroMaid().getCost() + "</html>");
+                v.setBaker("<html>AlexandroBaker <br> You own " + m.getAlexandroBaker().getOwned() + "<br> They Cost " + m.getAlexandroBaker().getCost() + "</html>");
+            }
+        });
+
 
     }
 
@@ -79,55 +99,6 @@ public class Controller extends JFrame {
         View v = new View();
         Controller thisIsTheProgram = new Controller(m, v);
         thisIsTheProgram.setVisible(true);
-
-        Connection conn = null;
-
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://db.umea-ntig.se:3306/te20? "+
-                    "allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",m.getuser(),m.getpassword());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-        try {
-            Statement stmt = conn.createStatement();
-            String SQLQuery = "SELECT * FROM fbs28";
-            ResultSet result = stmt.executeQuery(SQLQuery);
-
-            ResultSetMetaData metadata = result.getMetaData();
-
-            int numCols = metadata.getColumnCount();
-            for (int i = 1 ; i <= numCols ; i++) {
-                System.out.println(metadata.getColumnClassName(i));
-            }
-
-            while (result.next()) {
-                String output = "";
-                output += result.getInt("Fikabröd") + ", " +
-                        result.getString("password");
-                System.out.println(output);
-            }
-
-            // insert
-
-            // Scanner in = new Scanner(System.in);
-            // System.out.println("Ange namn:");
-            // String name = in.nextLine();
-            // System.out.println("Ange lösenord:");
-            // String password2 = in.nextLine();
-//
-            // for(int i = 0; i<1; i++) {
-                 SQLQuery = "INSERT INTO fbs28(name,password) VALUES (" + m.getFikabröd() + ", '" + m.getUPassword() + "')";
-                 stmt.executeUpdate(SQLQuery);
-            System.out.println("Your Save is : " + m.getUPassword());
-            // }
-
-            stmt.close();
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
 
 
     }

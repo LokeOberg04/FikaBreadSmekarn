@@ -5,6 +5,7 @@ import FikaBreadSmekarn.Assets.AlexandroMaid;
 import FikaBreadSmekarn.Assets.Building;
 
 import javax.swing.*;
+import java.sql.*;
 
 public class Model {
 
@@ -35,6 +36,105 @@ public class Model {
 
     public int getClickpower() {
         return Clickpower;
+    }
+
+    public void importsave() {
+
+            Connection conn = null;
+
+            try {
+                conn = DriverManager.getConnection("jdbc:mysql://db.umea-ntig.se:3306/te20? "+
+                        "allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",getuser(),getpassword());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+            try {
+                Statement stmt = conn.createStatement();
+                String SQLQuery = "SELECT * FROM lo28cc";
+                ResultSet result = stmt.executeQuery(SQLQuery);
+
+                ResultSetMetaData metadata = result.getMetaData();
+
+                int numCols = metadata.getColumnCount();
+                for (int i = 1 ; i <= numCols ; i++) {
+                    System.out.println(metadata.getColumnClassName(i));
+                }
+
+                while (result.next()) {
+
+                    Fikabröd = result.getInt("FikaBread");
+                    AlexandroMaid.setOwned(result.getInt("AlexandroMaids"));
+                    AlexandroBaker.setOwned(result.getInt("AlexandroBakers"));
+                    String output = "";
+                    output += result.getInt("FikaBread") + ", " +
+                            result.getInt("AlexandroMaids") + ", " +
+                        result.getInt("AlexandroBakers");
+                    System.out.println(output);
+                }
+
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+    public void save() {
+
+        Connection conn = null;
+
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://db.umea-ntig.se:3306/te20? "+
+                    "allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",getuser(),getpassword());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            Statement stmt = conn.createStatement();
+            String SQLQuery = "SELECT * FROM lo28cc";
+            ResultSet result = stmt.executeQuery(SQLQuery);
+
+            ResultSetMetaData metadata = result.getMetaData();
+
+            int numCols = metadata.getColumnCount();
+            for (int i = 1 ; i <= numCols ; i++) {
+                System.out.println(metadata.getColumnClassName(i));
+            }
+
+            //while (result.next()) {
+            //    String output = "";
+            //    output += result.getInt("Fikabröd") + ", " +
+            //            result.getString("password");
+            //    System.out.println(output);
+            //}
+
+            // insert
+
+            // Scanner in = new Scanner(System.in);
+            // System.out.println("Ange namn:");
+            // String name = in.nextLine();
+            // System.out.println("Ange lösenord:");
+            // String password2 = in.nextLine();
+//
+            // for(int i = 0; i<1; i++) {
+            SQLQuery = "UPDATE lo28cc SET FikaBread = " + getFikabröd() + ", AlexandroMaids = " + getAlexandroMaid().getOwned() + ", AlexandroBakers = " + getAlexandroBaker().getOwned();
+            stmt.executeUpdate(SQLQuery);
+            // }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void setClickpower(int clickpower) {
+        Clickpower = clickpower;
     }
 
     public void BuyBuilding(Building Building) {
