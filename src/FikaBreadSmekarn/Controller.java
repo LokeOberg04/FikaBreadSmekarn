@@ -57,19 +57,31 @@ public class Controller extends JFrame {
         v.getButton4().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("3");
+
+                m.BuyBuilding(m.getAlexandroFactory());
+                System.out.println("You have " + m.getAlexandroFactory().getOwned() + " AlexandroFactory\nThey now cost " + m.getAlexandroFactory().getCost() + " FikaBröd");
+                v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+                v.setFactory("<html>AlexandroFactory <br> You own " + m.getAlexandroFactory().getOwned() + "<br> They Cost " + m.getAlexandroFactory().getCost() + "</html>");
             }
         });
         v.getButton2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("4");
+
+                m.BuyBuilding(m.getAlexandro());
+                System.out.println("You have " + m.getAlexandro().getOwned() + " Alexandro\nThey now cost " + m.getAlexandro().getCost() + " FikaBröd");
+                v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+                v.setAlexandro("<html>Alexandro <br> You own " + m.getAlexandro().getOwned() + "<br> They Cost " + m.getAlexandro().getCost() + "</html>");
             }
         });
         v.getButton3().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("5");
+
+                m.BuyBuilding(m.getCooki());
+                System.out.println("You have " + m.getCooki().getOwned() + " Cooki\nThey now cost " + m.getCooki().getCost() + " FikaBröd");
+                v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+                v.setCooki("<html>Cooki <br> You own " + m.getCooki().getOwned() + "<br> They Cost " + m.getCooki().getCost() + "</html>");
             }
         });
 
@@ -84,10 +96,13 @@ public class Controller extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 m.importsave();
-                m.setClickpower(1+(m.getAlexandroMaid().getOwned() * m.getAlexandroMaid().getFps() + m.getAlexandroBaker().getOwned() * m.getAlexandroBaker().getFps()));
+                m.setClickpower(1+(m.getAlexandroMaid().getOwned() * m.getAlexandroMaid().getFps() + m.getAlexandroBaker().getOwned() * m.getAlexandroBaker().getFps() + m.getAlexandroFactory().getOwned() * m.getAlexandroFactory().getFps() + m.getAlexandro().getOwned() * m.getAlexandro().getFps() + m.getCooki().getOwned() * m.getCooki().getFps()));
                 v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
                 v.setMaid("<html>AlexandroMaid <br> You own " + m.getAlexandroMaid().getOwned() + "<br> They Cost " + m.getAlexandroMaid().getCost() + "</html>");
                 v.setBaker("<html>AlexandroBaker <br> You own " + m.getAlexandroBaker().getOwned() + "<br> They Cost " + m.getAlexandroBaker().getCost() + "</html>");
+                v.setFactory("<html>AlexandroFactory <br> You own " + m.getAlexandroFactory().getOwned() + "<br> They Cost " + m.getAlexandroFactory().getCost() + "</html>");
+                v.setAlexandro("<html>Alexandro <br> You own " + m.getAlexandro().getOwned() + "<br> They Cost " + m.getAlexandro().getCost() + "</html>");
+                v.setCooki("<html>Cooki <br> You own " + m.getCooki().getOwned() + "<br> They Cost " + m.getCooki().getCost() + "</html>");
             }
         });
 

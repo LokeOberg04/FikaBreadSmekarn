@@ -33,7 +33,7 @@
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="AlexandroMaid"/>
+          <text value="&lt;html&gt;AlexandroMaid&lt;br&gt;You own 0&lt;br&gt;They Cost 15&lt;/html&gt;"/>
         </properties>
       </component>
       <component id="4dbbf" class="javax.swing.JButton" binding="button4">
@@ -41,7 +41,7 @@
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="&lt;html&gt;Alexandro&lt;br&gt;You own 0&lt;br&gt;They Cost 120000&lt;/html&gt;"/>
         </properties>
       </component>
       <component id="2246e" class="javax.swing.JButton" binding="button5">
@@ -49,7 +49,7 @@
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="&lt;html&gt;Cooki&lt;br&gt;You own 0&lt;br&gt;They Cost 2400000&lt;/html&gt;"/>
         </properties>
       </component>
       <component id="60b3c" class="javax.swing.JButton" binding="button3">
@@ -57,7 +57,7 @@
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="&lt;html&gt;AlexandroFactory&lt;br&gt;You own 0&lt;br&gt;They Cost 6000&lt;/html&gt;"/>
         </properties>
       </component>
       <component id="1309a" class="javax.swing.JButton" binding="button2">
@@ -65,7 +65,7 @@
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="AlexandroBaker"/>
+          <text value="&lt;html&gt;AlexandroBaker&lt;br&gt;You own 0&lt;br&gt;They Cost 300&lt;/html&gt;"/>
         </properties>
       </component>
       <component id="b3120" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">

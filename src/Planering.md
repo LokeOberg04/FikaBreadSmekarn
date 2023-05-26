@@ -8,3 +8,6 @@ Jag har gjort en clicker, man kan klicka och då får man fikabröd. Nästa lekt
 
 # 2023-05-25 Torsdag
 Import och Save function funkar. Skulle ville göra flera "profiler" dock eftersom just nu så kör alla på samma save.
+
+# 2023-05-26 Fredag
+Flera saves + mer byggnader

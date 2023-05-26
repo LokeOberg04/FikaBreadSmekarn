@@ -65,4 +65,7 @@ public class View {
 
     public void setMaid(String c) {button1.setText(c);}
     public void setBaker(String c) {button2.setText(c);}
+    public void setFactory(String c) {button3.setText(c);}
+    public void setAlexandro(String c) {button4.setText(c);}
+    public void setCooki(String c) {button5.setText(c);}
 }
