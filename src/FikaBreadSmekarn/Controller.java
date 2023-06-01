@@ -25,6 +25,7 @@ public class Controller extends JFrame {
 
         Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\loke.oberg\\IdeaProjects\\ChatProgram\\src\\resources\\B).png");
         this.setIconImage(icon);
+        v.getFikaBrödButton().setIcon(new ImageIcon(icon));
 
         this.setContentPane(v.getPanel());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
