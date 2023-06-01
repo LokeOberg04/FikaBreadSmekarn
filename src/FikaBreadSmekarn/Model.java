@@ -84,15 +84,15 @@ public class Model {
 
                     Fikabröd = result.getInt("FikaBread");
                     AlexandroMaid.setOwned(result.getInt("AlexandroMaids"));
-                    AlexandroMaid.setCost((int) (AlexandroMaid.getCost() * Math.pow(1.15, AlexandroMaid.getOwned())));
+                    AlexandroMaid.setCost((int) (15 * Math.pow(1.15, AlexandroMaid.getOwned())));
                     AlexandroBaker.setOwned(result.getInt("AlexandroBakers"));
-                    AlexandroBaker.setCost((int) (AlexandroBaker.getCost() * Math.pow(1.15, AlexandroBaker.getOwned())));
+                    AlexandroBaker.setCost((int) (300 * Math.pow(1.15, AlexandroBaker.getOwned())));
                     AlexandroFactory.setOwned(result.getInt("AlexandroFactories"));
-                    AlexandroFactory.setCost((int) (AlexandroFactory.getCost() * Math.pow(1.15, AlexandroFactory.getOwned())));
+                    AlexandroFactory.setCost((int) (6000 * Math.pow(1.15, AlexandroFactory.getOwned())));
                     Alexandro.setOwned(result.getInt("Alexandros"));
-                    Alexandro.setCost((int) (Alexandro.getCost() * Math.pow(1.15, Alexandro.getOwned())));
+                    Alexandro.setCost((int) (120000 * Math.pow(1.15, Alexandro.getOwned())));
                     Cooki.setOwned(result.getInt("Cookis"));
-                    Cooki.setCost((int) (Cooki.getCost() * Math.pow(1.15, Cooki.getOwned())));
+                    Cooki.setCost((int) (2400000 * Math.pow(1.15, Cooki.getOwned())));
                     String output = "";
                     output += result.getInt("FikaBread") + ", " +
                             result.getInt("AlexandroMaids") + ", " +
