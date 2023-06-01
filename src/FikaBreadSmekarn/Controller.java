@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Controller extends JFrame {
 
@@ -114,6 +116,15 @@ public class Controller extends JFrame {
         View v = new View();
         Controller thisIsTheProgram = new Controller(m, v);
         thisIsTheProgram.setVisible(true);
+
+        java.util.Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+            m.Click();
+                v.setFika(m.getFikabröd() + " FikaBröd\n" + m.getClickpower() + " Clicking Power");
+            }
+        }, 0, 1000);//wait 0 milliseconds before doing the action and do it every 1000ms (1 second)
 
 
     }

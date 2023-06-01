@@ -25,7 +25,7 @@ public class Model {
     JPasswordField pf = new JPasswordField();
     //String password = new String(pf.getPassword());
 
-    String password = JOptionPane.showInputDialog(pf, "password");
+    String password = DatabaseLogin.password;
     public String getpassword() {
         return password;
     }
